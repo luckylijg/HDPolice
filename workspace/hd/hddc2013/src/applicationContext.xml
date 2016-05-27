@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+	 	http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx-3.0.xsd"
+	
+	default-autowire="byName">
+	<aop:aspectj-autoproxy/>
+	
+	<!-- spring自动管理service，dao层bean类 -->
+	<context:component-scan base-package="com.goldsoft.service" />
+	<context:component-scan base-package="com.goldsoft.dao" />
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="configLocation"
+			value="classpath:hibernate.cfg.xml">
+		</property>
+	</bean>
+	
+	<!-- 配置事务管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- 配置Advice(事务的传播特性) -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes><!-- propagation - 传播 -->
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="get*"  />
+			
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- 配置事务管理器应用的范围 -->
+	<aop:config>
+	
+		<aop:pointcut id="servicesPointcut"
+			expression="execution(* com.goldsoft.service..*(..))" />
+		<aop:advisor advice-ref="txAdvice"
+			pointcut-ref="servicesPointcut" />
+			
+	</aop:config>
+	
+	<bean id="myInterceptor" class="com.goldsoft.filter.MyInterceptor"/>
+
+	
+
+</beans>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<package name="data" namespace="/manage/data" extends="default">
+
+
+		<action name="questionSort" class="com.goldsoft.action.QuestionSortAction">
+			<result name="list1">questionSort_list.jsp</result>
+			<result name="inAdd">questionSort_add.jsp</result>
+			<result name="add" type="redirect">questionSort!list1.action</result>
+			<result name="edit">questionSort_edit.jsp</result>
+			<result name="update" type="redirect">questionSort!list1.action</result>
+			<result name="delete" type="redirect">questionSort!list1.action</result>
+
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+
+		<action name="handleSort" class="com.goldsoft.action.HandleSortAction">
+			<result name="list">handleSort_list.jsp</result>
+			<result name="inAdd">handleSort_add.jsp</result>
+			<result name="add" type="redirect">handleSort!list.action</result>
+			<result name="edit">handleSort_edit.jsp</result>
+			<result name="update" type="redirect">handleSort!list.action</result>
+			<result name="delete" type="redirect">handleSort!list.action</result>
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="fieldinspectUser" class="com.goldsoft.action.UserAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="department" class="com.goldsoft.action.DepartmentAction">
+			<result name="list">department_list.jsp</result>
+			<result name="inAdd">department_add.jsp</result>
+			<result name="add" type="redirect">department!list1.action</result>
+			<result name="edit">department_edit.jsp</result>
+			<result name="update" type="redirect">department!list1.action</result>
+			<result name="delete" type="redirect">department!list1.action</result>
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+			
+			<result name="qianfenall">qianfen_all.jsp</result>
+		</action>
+		<action name="user" class="com.goldsoft.action.UserAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+			
+		</action>
+	</package>
+
+
+
+</struts>

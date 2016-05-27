@@ -1,0 +1,12 @@
+/._.project
+/.classpath
+/.project
+/.settings/
+/applicationContext.xml
+/com/
+/hddc-complaint.xml
+/hddc-data.xml
+/hibernate.cfg.xml
+/hibernate.reveng.xml
+/org/
+/struts.xml

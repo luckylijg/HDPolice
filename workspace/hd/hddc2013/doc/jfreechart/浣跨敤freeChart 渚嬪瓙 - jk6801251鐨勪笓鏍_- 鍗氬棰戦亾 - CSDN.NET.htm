@@ -1,0 +1,826 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>使用freeChart 例子 - jk6801251的专栏 - 博客频道 - CSDN.NET</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="JFreeChart项目简介JFreeChart是开放源代码站点SourceForge.net上的一个JAVA项目，它主要用来各种各样的图表，这些图表包括：饼图、柱状图(普通柱状图以及堆栈柱状图)、线图、区域图、分布图、混合图、甘特图以及一些仪表盘等等。这些不同式样的图表基本上可以满足目前的要求。为了减少篇幅本文主要介绍前面三种类型的图表，读者可以触类旁通去开发其他样式的图表。下面几个是JFr" />
+<script src="http://static.blog.csdn.net/scripts/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/ad.js?v=1.1"></script>
+<link rel="Stylesheet" type="text/css" href="http://static.blog.csdn.net/skin/default/css/style.css?v=1.1" />
+<link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="/jk6801251/rss/list" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/default.css" />
+</head>
+<body>
+<script src="http://csdnimg.cn/pubnav/js/pub_topnav_2011.js?v=1.1" type="text/javascript"></script>
+<div id="container">
+<div id="header">
+    <div class="header">
+        <div id="blog_title">
+            <h1><a href="/jk6801251">jk6801251的专栏</a></h1>
+            <h2></h2>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div id="navigator">
+    <div class="navigator_bg"></div>
+    <div class="navigator">
+        <ul>
+            <li id="btnContents"><a href="/jk6801251?viewmode=contents"><span><img src="http://static.blog.csdn.net/images/ico_list.gif">目录视图</span></a></li>
+            <li id="btnView"><a href="/jk6801251?viewmode=list"><span><img src="http://static.blog.csdn.net/images/ico_summary.gif">摘要视图</span></a></li>
+            <li id="btnRss"><a href="/jk6801251/rss/list"><span><img src="http://static.blog.csdn.net/images/ico_rss.gif">订阅</span></a></li>
+</ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var username = "jk6801251";
+    var blog_address = "http://blog.csdn.net/jk6801251";
+    var static_host = "http://static.blog.csdn.net";
+    var currentUserName = "";
+</script>
+        
+<div id="body">
+<div id="main">
+<div class="main">
+<div class="notice"> 
+
+<a href="http://blog.csdn.net/blogdevteam/article/details/8687376
+" target="_blank">
+<font color=blue>2013年7月微软MVP申请开始啦！ 
+   </font></a>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="http://blog.csdn.net/blogdevteam/article/details/8664620" target="_blank"><font color=blue>CSDN博客移动开发排行榜 
+</font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="http://blog.csdn.net/blogdevteam/article/details/8699892" target="_blank"><font color=blue>有奖征集活动系列—《iOS游戏编程之旅》 
+
+
+</font></a>
+
+<br />
+
+
+
+
+
+<a href="http://bbs.csdn.net/topics/390397409
+"target="_blank">
+<font color=red>【有奖提问】CSDN论坛第1期专家问答开始
+
+
+ </font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="http://blog.csdn.net/blogdevteam/article/details/8717564"target="_blank">
+<font color=red>来极客头条，赢下载积分
+ </font></a>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="http://bbs.csdn.net/topics/390393217"target="_blank">
+<font color=red>下载频道3月领任务~赚下载分！ 
+  </font></a>
+
+
+</div><div id="article_details" class="details">
+    <div class="article_title">
+    <span class="ico ico_type_Repost"></span>
+    <h3>
+        <span class="link_title"><a href="/jk6801251/article/details/3734863">
+        使用freeChart 例子
+        </a></span>
+    </h3>
+</div>
+
+        
+    <div class="article_manage">
+    <span class="link_postdate">2009-01-08 15:42</span>
+    <span class="link_view" title="阅读次数">2410人阅读</span>
+    <span class="link_comments" title="评论次数"><a href="#comments">评论</a>(1)</span>
+    <span class="link_collect"><a href="javascript:void(0);" onclick="javascript:collectArticle('使用freeChart 例子','3734863');return false;" title="收藏">收藏</a></span>
+    <span class="link_report"><a href="#report"  onclick="javascript:report(3734863,2);return false;" title="举报">举报</a></span>
+    
+</div>
+<div class="tag2box"><a href='http://blog.csdn.net/tag/details.html?tag=jfreechart' target=_blank>jfreechart</a><a href='http://blog.csdn.net/tag/details.html?tag=dataset' target=_blank>dataset</a><a href='http://blog.csdn.net/tag/details.html?tag=exception' target=_blank>exception</a><a href='http://blog.csdn.net/tag/details.html?tag=javascript' target=_blank>javascript</a><a href='http://blog.csdn.net/tag/details.html?tag=import' target=_blank>import</a><a href='http://blog.csdn.net/tag/details.html?tag=swing' target=_blank>swing</a></div>
+
+
+    
+<div id="article_content" class="article_content">
+<P><A name=1><SPAN class=atitle>JFreeChart项目简介</SPAN></A></P>
+<P>JFreeChart是开放源代码站点SourceForge.net上的一个JAVA项目，它主要用来各种各样的图表，这些图表包括：饼图、柱状图(普通柱状图以及堆栈柱状图)、线图、区域图、分布图、混合图、甘特图以及一些仪表盘等等。这些不同式样的图表基本上可以满足目前的要求。为了减少篇幅本文主要介绍前面三种类型的图表，读者可以触类旁通去开发其他样式的图表。下面几个是JFreeChart产生的这三种类型图表的结果： </P><BR><A name=N10049><B>图1</B></A><BR><IMG alt="" src="http://www.ibm.com/developerworks/cn/java/l-jfreechart/images/image001.gif"> <BR><BR><A name=N10056><B>图2</B></A><BR><IMG alt="" src="http://www.ibm.com/developerworks/cn/java/l-jfreechart/images/image002.gif"> <BR><BR><A name=N10063><B>图3</B></A><BR><IMG alt="" src="http://www.ibm.com/developerworks/cn/java/l-jfreechart/images/image003.gif"> <BR>
+<P>上面的三个图都是表示四个季度的某个产品的销量信息。在继续下面小节之前必须先准备好开发环境，因为是基于WEB浏览器的图表展现，因此需要一个Servlet引擎或者是J2EE应用服务器（例如WebSphere，Tomcat等）。WEB环境的搭建就不累赘了，读者根据喜好自行安装。JFreeChart引擎本身需要到SourceForge.net上下载，地址如下： </P>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD class=code-outline><PRE class=displaycode>JFreeChart主页：
+        <A href="http://www.jfree.org/jfreechart/index.html" cmImpressionSent="1"><U><FONT color=#996699>http://www.jfree.org/jfreechart/index.html</FONT></U></A>
+JFreeChart下载页面：
+        <A href="http://sourceforge.net/projects/jfreechart/" cmImpressionSent="1"><U><FONT color=#996699>http://sourceforge.net/projects/jfreechart/</FONT></U></A>
+				
+      </PRE></TD></TR></TBODY></TABLE><BR>
+<P>下载的时候需要注意的是必须下载两个文件：JFreeChart以及Jcommon。目前最新配套版本是：JFreeChart 0.9.11 Jcommon 0.8.6 </P>
+<P>这里有点笔者在开发中遇见的问题需要注意的是：在使用Eclipse开发的时候会报一个莫名其妙的错误，错误可能指向某个类文件的第一行。遇到这样的问题一般是因为没有把Jcommon的jar包设置到项目的类路径中的缘故。具体的原因不祥。 </P><BR>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD><IMG height=1 alt="" src="http://www.ibm.com/i/v14/rules/blue_rule.gif" width="100%"><BR><IMG height=6 alt="" src="http://www.ibm.com/i/c.gif" width=8 border=0></TD></TR></TBODY></TABLE>
+<TABLE class=no-print cellSpacing=0 cellPadding=0 align=right>
+<TBODY>
+<TR align=right>
+<TD><IMG height=4 alt="" src="http://www.ibm.com/i/c.gif" width="100%"><BR>
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+<TR>
+<TD vAlign=center><IMG height=16 alt="" src="http://www.ibm.com/i/v14/icons/u_bold.gif" width=16 border=0><BR></TD>
+<TD vAlign=top align=right><A class=fbox href="http://www.ibm.com/developerworks/cn/java/l-jfreechart/#main" cmImpressionSent="1"><B><FONT color=#996699>回页首</FONT></B></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR><BR>
+<P><A name=2><SPAN class=atitle>解读JFreeChart的源码结构</SPAN></A></P>
+<P>在开始使用JFreeChart之前我们有必要先大概了解一下JFreeChart本身的结构以及它所带一些例子程序，这样有助于我们下一步自行开发。下载JFreeChart包后已经带有非常丰富的例子，因为JFreeChart这个项目本身的使用文档非常少，因此学习它最好的办法就是学习它所带的例子源码。在包org.jfree.chart.demo中有几十个文件用于展示JFreeChart所能支持的所有图表的结果。如果你的JDK是比较新的情况下可能在运行这些例子时会有问题，现象如下： </P>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD class=code-outline><PRE class=displaycode>java.lang.UnsatisfiedLinkError: initDDraw
+	at sun.awt.windows.Win32OffScreenSurfaceData.initDDraw(Native Method)
+	at sun.awt.windows.Win32OffScreenSurfaceData.&lt;clinit&gt;(Win32OffScreenSurfaceData.java:141)
+<!-- code sample is too wide -->	at sun.awt.Win32GraphicsDevice.&lt;clinit&gt;(Win32GraphicsDevice.java:58)
+	at sun.awt.Win32GraphicsEnvironment.makeScreenDevice(Win32GraphicsEnvironment.java:168)
+<!-- code sample is too wide -->	at sun.java2d.SunGraphicsEnvironment.getScreenDevices(SunGraphicsEnvironment.java:240)
+<!-- code sample is too wide -->	at sun.awt.Win32GraphicsEnvironment.getDefaultScreenDevice(Win32GraphicsEnvironment.java:61)
+<!-- code sample is too wide -->	at java.awt.Window.init(Window.java:224)
+	at java.awt.Window.&lt;init&gt;(Window.java:268)
+	at java.awt.Frame.&lt;init&gt;(Frame.java:398)
+	at javax.swing.JFrame.&lt;init&gt;(JFrame.java:198)
+	at org.jfree.chart.demo.JFreeChartDemo.&lt;init&gt;(JFreeChartDemo.java:148)
+	at org.jfree.chart.demo.JFreeChartDemo.main(JFreeChartDemo.java:285)
+Exception in thread "main"
+</PRE></TD></TR></TBODY></TABLE><BR>
+<P>这个错误是由于新版的Swing大量的使用了微软的DirectDraw的技术来提高画图的性能，而可能你的显卡在这时候会跟你闹点情绪或者显卡本身并不支持这样的一个技术。难道就没有办法了嘛？要解决这个问题也非常简单，我们可以屏蔽掉DirectDraw，不让Swing使用该技术就可以了。在运行这些代码时给虚拟机指定参数-Dsun.java2d.noddraw即可。 </P>
+<P>这时可能你又该纳闷了，不说是基于Web的图表嘛，怎么又扯到Swing上了？这是因为为了使开发者容易上手，无需配置任何运行环境，所以这些例子都是基于GUI方式的用于展现给开发者如果生成一个图表，我们要学习的也就是如何利用这个引擎生成图表而不是怎么来显示一个图表。当我们把生成的图表对象Export到一个图像文件即可在Web上发布。 </P>
+<P>下面我们来介绍JFreeChart中几个核心的对象类：</P>
+<TABLE cellSpacing=0 cellPadding=5 width="100%" border=1>
+<TBODY>
+<TR bgColor=#99ccff>
+<TD width="30%">类名</TD>
+<TD width="70%">类的作用以及简单描述</TD></TR>
+<TR>
+<TD>JFreeChart</TD>
+<TD>图表对象，任何类型的图表的最终表现形式都是在该对象进行一些属性的定制。JFreeChart引擎本身提供了一个工厂类用于创建不同类型的图表对象</TD></TR>
+<TR>
+<TD>XXXXXDataset</TD>
+<TD>数据集对象，用于提供显示图表所用的数据。根据不同类型的图表对应着很多类型的数据集对象类</TD></TR>
+<TR>
+<TD>XXXXXPlot</TD>
+<TD>图表区域对象，基本上这个对象决定着什么样式的图表，创建该对象的时候需要Axis、Renderer以及数据集对象的支持</TD></TR>
+<TR>
+<TD>XXXXXAxis</TD>
+<TD>用于处理图表的两个轴：纵轴和横轴</TD></TR>
+<TR>
+<TD>XXXXXRenderer</TD>
+<TD>负责如何显示一个图表对象</TD></TR>
+<TR>
+<TD>XXXXXURLGenerator</TD>
+<TD>用于生成Web图表中每个项目的鼠标点击链接</TD></TR>
+<TR>
+<TD>XXXXXToolTipGenerator</TD>
+<TD>用于生成图象的帮助提示，不同类型图表对应不同类型的工具提示类</TD></TR></TBODY></TABLE>
+<P>基本上我认为JFreeChart项目本身的类结构的设计并不是很好，首先在创建图表的时候用到了大量的工厂方法，这样做虽然可以简化创建图表对象的代码，但是对项目本身或者开发人员来讲自行扩展一种新的图表都仍然是一件很麻烦的事情；其次除图表对象本身外其余的类过于复杂，使用者必须去了解每个类型的图表对象应该对应哪些Axis、Plot、Renderer类，并且必须非常熟悉这些类的构造函数中每个参数的具体含义。这些问题都大大困扰很多初学者。不过，虽然存在很多问题，但是JFreeChart本身仍不失为一个非常优秀的图表引擎，况且项目本身也在逐渐的发展中。 </P>
+<P>在非常简略的介绍了JFreeChart本身的代码结构后，下面我们开始动手试验几个常用的图表并把他们放到web上。 </P><BR>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD><IMG height=1 alt="" src="http://www.ibm.com/i/v14/rules/blue_rule.gif" width="100%"><BR><IMG height=6 alt="" src="http://www.ibm.com/i/c.gif" width=8 border=0></TD></TR></TBODY></TABLE>
+<TABLE class=no-print cellSpacing=0 cellPadding=0 align=right>
+<TBODY>
+<TR align=right>
+<TD><IMG height=4 alt="" src="http://www.ibm.com/i/c.gif" width="100%"><BR>
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+<TR>
+<TD vAlign=center><IMG height=16 alt="" src="http://www.ibm.com/i/v14/icons/u_bold.gif" width=16 border=0><BR></TD>
+<TD vAlign=top align=right><A class=fbox href="http://www.ibm.com/developerworks/cn/java/l-jfreechart/#main" cmImpressionSent="1"><B><FONT color=#996699>回页首</FONT></B></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR><BR>
+<P><A name=3><SPAN class=atitle>使用JFreeChart生成各种样式的图表</SPAN></A></P>
+<P>限于篇幅的问题我们在这里只实现两种常用的图表，其他类型图表读者可以触类旁通。我们先给出柱状图的实现，饼图的实现再来跟柱状图进行比较。 </P>
+<P><A name=N100FA><SPAN class=smalltitle><STRONG><FONT face=Arial size=3>1 柱状图</FONT></STRONG></SPAN></A></P>
+<P>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD class=code-outline><PRE class=displaycode>package lius.chart.demo;
+import java.io.*;
+import org.jfree.data.*;
+import org.jfree.chart.*;
+import org.jfree.chart.plot.*;
+/**
+ * 该类用于演示最简单的柱状图生成
+ * @author Winter Lau
+ */
+public class BarChartDemo {
+	public static void main(String[] args) throws IOException{
+		CategoryDataset dataset = getDataSet2();
+		JFreeChart chart = ChartFactory.createBarChart3D(
+							"水果产量图", // 图表标题
+							"水果", // 目录轴的显示标签
+							"产量", // 数值轴的显示标签
+							dataset, // 数据集
+							PlotOrientation.VERTICAL, // 图表方向：水平、垂直
+<!-- code sample is too wide -->							true, 	// 是否显示图例(对于简单的柱状图必须是false)
+<!-- code sample is too wide -->							false, 	// 是否生成工具
+							false 	// 是否生成URL链接
+							);
+							
+		FileOutputStream fos_jpg = null;
+		try {
+			fos_jpg = new FileOutputStream("D://fruit.jpg");
+			ChartUtilities.writeChartAsJPEG(fos_jpg,100,chart,400,300,null);
+		} finally {
+			try {
+				fos_jpg.close();
+			} catch (Exception e) {}
+		}
+	}
+	/**
+	 * 获取一个演示用的简单数据集对象
+	 * @return
+	 */
+	private static CategoryDataset getDataSet() {
+		DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+		dataset.addValue(100, null, "苹果");
+		dataset.addValue(200, null, "梨子");
+		dataset.addValue(300, null, "葡萄");
+		dataset.addValue(400, null, "香蕉");
+		dataset.addValue(500, null, "荔枝");
+		return dataset;
+	}
+	/**
+	 * 获取一个演示用的组合数据集对象
+	 * @return
+	 */
+	private static CategoryDataset getDataSet2() {
+		DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+		dataset.addValue(100, "北京", "苹果");
+		dataset.addValue(100, "上海", "苹果");
+		dataset.addValue(100, "广州", "苹果");
+		dataset.addValue(200, "北京", "梨子");
+		dataset.addValue(200, "上海", "梨子");
+		dataset.addValue(200, "广州", "梨子");
+		dataset.addValue(300, "北京", "葡萄");
+		dataset.addValue(300, "上海", "葡萄");
+		dataset.addValue(300, "广州", "葡萄");
+		dataset.addValue(400, "北京", "香蕉");
+		dataset.addValue(400, "上海", "香蕉");
+		dataset.addValue(400, "广州", "香蕉");
+		dataset.addValue(500, "北京", "荔枝");
+		dataset.addValue(500, "上海", "荔枝");
+		dataset.addValue(500, "广州", "荔枝");
+		return dataset;
+	}
+}
+</PRE></TD></TR></TBODY></TABLE><BR>
+<P>程序运行结束后生成的图片文件效果如下图所示：</P><BR><A name=N1010B><B>图4</B></A><BR><IMG alt="" src="http://www.ibm.com/developerworks/cn/java/l-jfreechart/images/image004.gif"> <BR>
+<P>如果是使用简单的数据即使用getDataSet方法获取数据集时产生的图片文件如下：</P><BR><A name=N1011B><B>图5</B></A><BR><IMG alt="" src="http://www.ibm.com/developerworks/cn/java/l-jfreechart/images/image005.gif"> <BR>
+<P><A name=N10126><SPAN class=smalltitle><STRONG><FONT face=Arial size=3>2 饼图</FONT></STRONG></SPAN></A></P>
+<P><STRONG><FONT face=Arial size=3></FONT></STRONG>
+<P>对于饼图而言，数据集的获取用的不是同一个数据集类，另外饼图不支持同一个类别的项目中还有子项目这样的数据。我们只给出创建饼图的代码，至于写图表到一个文件则与柱状图一致，无需重复。 </P>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD class=code-outline><PRE class=displaycode>package lius.chart.demo;
+import java.io.*;
+import org.jfree.data.*;
+import org.jfree.chart.*;
+/**
+ * 用于演示饼图的生成
+ * @author Winter Lau
+ */
+public class PieChartDemo {
+	public static void main(String[] args) throws IOException{
+		DefaultPieDataset data = getDataSet();
+		JFreeChart chart = ChartFactory.createPie3DChart("水果产量图",  // 图表标题
+		data, 
+		true, // 是否显示图例
+		false,
+		false
+		);
+		//写图表对象到文件，参照柱状图生成源码
+	}
+	/**
+	 * 获取一个演示用的简单数据集对象
+	 * @return
+	 */
+	private static DefaultPieDataset getDataSet() {
+		DefaultPieDataset dataset = new DefaultPieDataset();
+		dataset.setValue("苹果",100);
+		dataset.setValue("梨子",200);
+		dataset.setValue("葡萄",300);
+		dataset.setValue("香蕉",400);
+		dataset.setValue("荔枝",500);
+		return dataset;
+	}
+}
+</PRE></TD></TR></TBODY></TABLE><BR>
+<P>生成的饼图文件效果如下： </P><BR><A name=N1013A><B>图6</B></A><BR><IMG alt="" src="http://www.ibm.com/developerworks/cn/java/l-jfreechart/images/image006.gif"> <BR><BR>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD><IMG height=1 alt="" src="http://www.ibm.com/i/v14/rules/blue_rule.gif" width="100%"><BR><IMG height=6 alt="" src="http://www.ibm.com/i/c.gif" width=8 border=0></TD></TR></TBODY></TABLE>
+<TABLE class=no-print cellSpacing=0 cellPadding=0 align=right>
+<TBODY>
+<TR align=right>
+<TD><IMG height=4 alt="" src="http://www.ibm.com/i/c.gif" width="100%"><BR>
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+<TR>
+<TD vAlign=center><IMG height=16 alt="" src="http://www.ibm.com/i/v14/icons/u_bold.gif" width=16 border=0><BR></TD>
+<TD vAlign=top align=right><A class=fbox href="http://www.ibm.com/developerworks/cn/java/l-jfreechart/#main" cmImpressionSent="1"><B><FONT color=#996699>回页首</FONT></B></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR><BR>
+<P><A name=4><SPAN class=atitle>将生成的图表移到浏览器上</SPAN></A></P>
+<P>为了将生成的图表直接传给客户端浏览器，只需要将前面两个例子中的文件流换成是通过HttpServletResponse对象获取到的输出流，详细代码清单如下： </P>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD class=code-outline><PRE class=displaycode>package lius.chart.demo;
+import java.io.IOException;
+import javax.servlet.*;
+import javax.servlet.http.HttpServlet;
+import org.jfree.data.*;
+import org.jfree.chart.*;
+/**
+ * 演示通过servlet直接输出图表
+ * @author Winter Lau
+ */
+public class ChartDemoServlet extends HttpServlet {
+	public void service(ServletRequest req, ServletResponse res)
+		throws ServletException, IOException 
+	{
+		res.setContentType("image/jpeg");
+		DefaultPieDataset data = getDataSet();
+		JFreeChart chart = ChartFactory.createPie3DChart("水果产量图",
+		data,
+		true,
+		false,
+		false
+		);
+				
+		ChartUtilities.writeChartAsJPEG(res.getOutputStream(),
+			100,chart,400,300,null);
+	}
+	/**
+	 * 获取一个演示用的简单数据集对象
+	 * @return
+	 */
+	private static DefaultPieDataset getDataSet() {
+		DefaultPieDataset dataset = new DefaultPieDataset();
+		dataset.setValue("苹果",100);
+		dataset.setValue("梨子",200);
+		dataset.setValue("葡萄",300);
+		dataset.setValue("香蕉",400);
+		dataset.setValue("荔枝",500);
+		return dataset;
+	}
+}
+</PRE></TD></TR></TBODY></TABLE><BR><BR>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD><IMG height=1 alt="" src="http://www.ibm.com/i/v14/rules/blue_rule.gif" width="100%"><BR><IMG height=6 alt="" src="http://www.ibm.com/i/c.gif" width=8 border=0></TD></TR></TBODY></TABLE>
+<TABLE class=no-print cellSpacing=0 cellPadding=0 align=right>
+<TBODY>
+<TR align=right>
+<TD><IMG height=4 alt="" src="http://www.ibm.com/i/c.gif" width="100%"><BR>
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+<TR>
+<TD vAlign=center><IMG height=16 alt="" src="http://www.ibm.com/i/v14/icons/u_bold.gif" width=16 border=0><BR></TD>
+<TD vAlign=top align=right><A class=fbox href="http://www.ibm.com/developerworks/cn/java/l-jfreechart/#main" cmImpressionSent="1"><B><FONT color=#996699>回页首</FONT></B></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR><BR>
+<P><A name=5><SPAN class=atitle>高级主题</SPAN></A></P>
+<P>很多情况我们不仅仅要求可以在浏览器上显示一个图表，我们更需要客户可以直接在图表上做一下交互的操作，例如获取信息提示，点击图表某个部分进行更详细信息的展示等等。例如前面生成的简单柱状图，用户需要在看到柱状图后点击某种水果例如是苹果即可看到各个地区苹果产量的情况。为此就要求该图形具有交互操作的功能。在HTML中为了让一个图像具有可交互的功能就必须给该图像定义一个Map对象。下表节选一段具有该功能的HTML代码 </P>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD class=code-outline><PRE class=displaycode>&lt;MAP NAME="chartMap"&gt;
+&lt;AREA SHAPE="RECT" COORDS="81,15,126,254" href="?series=0&amp;category=100" title="100 = 7,048" 
+<!-- code sample is too wide -->	onclick="javascript:clickChart('100');return false;"&gt;
+&lt;AREA SHAPE="RECT" COORDS="143,27,188,255" href="?series=0&amp;category=200" title="200 = 6,721" 
+<!-- code sample is too wide -->	onclick="javascript: clickChart ('200');return false;"&gt;
+&lt;AREA SHAPE="RECT" COORDS="205,54,250,255" href="?series=0&amp;category=300" title="300 = 5,929" 
+<!-- code sample is too wide -->	onclick="javascript: clickChart ('300');return false;"&gt;
+&lt;AREA SHAPE="RECT" COORDS="267,85,312,255" href="?series=0&amp;category=400" title="400 = 5,005" 
+<!-- code sample is too wide -->	onclick="javascript: clickChart ('400');return false;"&gt;
+&lt;AREA SHAPE="RECT" COORDS="329,17,374,255" href="?series=0&amp;category=Diet" title="Diet = 7,017" onclick="javascript: 
+<!-- code sample is too wide -->	clickChart ('Diet');return false;"&gt;
+&lt;/MAP&gt;
+</PRE></TD></TR></TBODY></TABLE><BR>
+<P>由此就产生了一个问题：如果根据一个图像来生成对应的MAP对象。我们回头看看刚才的代码，在创建一个图表对象时候有两个参数，我们举柱状图的例子来讲这两个参数就是ChartFactory. createBarChart3D方法中的最后两个参数，这两个参数的类型都是布尔值。这两个参数意思分别是：是否创建工具提示(tooltip)以及是否生成URL。这两个参数分别对应着MAP中一个AREA的title属性以及href属性。 </P>
+<P>可是我想知道的是怎么来产生这个MAP啊！哈哈，不要着急，JFreeChart已经帮我们做好生成MAP对象的功能。为了生成MAP对象就要引入另外一个对象：ChartRenderingInfo。因为JFreeChart没有直接的方法利用一个图表对象直接生成MAP数据，它需要一个中间对象来过渡，这个对象就是ChartRenderingInfo。下图是生成MAP数据的流程图： </P><BR><A name=N10167><B>图7</B></A><BR><IMG alt="" src="http://www.ibm.com/developerworks/cn/java/l-jfreechart/images/image007.gif"> <BR>
+<P>如上图所示，ChartUtilities类是整个流程的核心，它周围的对象都是一些例如数据对象或者是文件等。这个流程简单描述如下：首先创建一个ChartRenderingInfo对象并在调用ChartUtilities的writeChartAsJPEG时作为最后一个参数传递进去。调用该方法结束后将产生一个图像文件以及一个填充好MAP数据的ChartRenderingInfo对象，有了这个对象我们还是没有办法获取具体的MAP数据，我们还必须借助于ChartUtilities的writeImageMap方法来将ChartRenderingInfo对象读取出来，获取MAP数据的代码片断如下： </P>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD class=code-outline><PRE class=displaycode>		PrintWriter w = null;
+		FileOutputStream fos_jpg = null;
+		FileOutputStream fos_cri = null;
+		try{
+			//根据不同类型的图表使用不同类，以下是针对饼图的操作
+			PiePlot plot = (PiePlot) chart.getPlot();
+			plot.setURLGenerator(new StandardPieURLGenerator(url));
+			//设置工具提示
+		   plot.setToolTipGenerator(new StandardPieToolTipGenerator());
+			fos_jpg = new FileOutputStream(“d://fruit.jpg”); 
+			ChartUtilities.writeChartAsJPEG(
+				fos_jpg,
+				100,
+				chart,
+				400,
+				300,
+				info);
+			fos_cri = new FileOutputStream(__d://fruit.map__);
+			w = new PrintWriter(fos_cri);
+			ChartUtilities.writeImageMap(w, __mapname__, info);
+			w.flush();
+		}finally{
+			try{
+				w.close();
+			}catch(Exception e){}	
+			try{
+				fos_cri.close();
+			}catch(Exception e){}	
+			try{
+				fos_jpg.close();
+			}catch(Exception e){}
+		}
+</PRE></TD></TR></TBODY></TABLE><BR>
+<P>打开文件D:/fruit.map，文件的内容就是要写到页面上的MAP数据。把生成的图像文件以及MAP数据文件写到页面上即可完成热点图表的功能。至于怎么结合两者之间的关系例如图像的useMap属性值必须与MAP对象的名称结合起来，必须根据实际的应用情况进行相应的处理。笔者建议把二者通过标签库封装起来，图像文件的名称以及MAP对象的名称由标签库统一进行控制，这样可以保证二者的一致性。 </P>
+<P>&nbsp;</P>
+</div>
+<div class="share_buttons" id="sharePanel"></div>
+<!--192.168.1.236-->
+<div class="article_next_prev">
+    <li class="prev_article"><span>上一篇：</span><a href="/jk6801251/article/details/3629750">替换反斜杠</a></li>
+    <li class="next_article"><span>下一篇：</span><a href="/jk6801251/article/details/3849669">JMF有感</a></li>
+</div>
+
+
+    
+</div>
+<div id="ad_cen"></div>
+<script type="text/javascript">
+    new Ad(4, 'ad_cen');
+</script>
+<div id="comment_title" class="panel_head">查看评论<a name="comments"></a></div>
+<div id="comment_list"></div>
+<div id="comment_bar"></div>
+<div id="comment_form"></div>
+<div class="announce">* 以上用户言论只代表其个人观点，不代表CSDN网站的观点或立场<a name="reply"></a><a name="quote"></a></div>
+<script type="text/javascript">
+    var fileName = '3734863';
+    var commentscount = 1;
+    var islock = false
+</script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/comment.js?v=1.8"></script>
+<div id="ad_bot"></div>
+<script type="text/javascript">
+    new Ad(5, 'ad_bot');
+</script>
+<div id="report_dialog"></div>
+
+<div id="d-top" style="display:none;">
+<a id="d-top-a" href="#" title="回到顶部">
+<img src="http://static.blog.csdn.net/images/top.png" alt="TOP" /></a>
+</div>
+<script type="text/javascript">
+    $(function(){
+        var d_top=$('#d-top');
+        document.onscroll=function(){
+            var scrTop=(document.body.scrollTop||document.documentElement.scrollTop);
+            if(scrTop>500){
+                d_top.show();
+            }else{
+                d_top.hide();
+            }
+        }
+        $('#d-top-a').click(function(){
+            scrollTo(0,0);
+            this.blur();
+            return false;
+        });
+    });
+</script>
+
+
+
+<div class="clear"></div>
+</div>
+</div>
+
+<div id="side">
+<div class="side">
+<div id="panel_Profile" class="panel">
+    <ul class="panel_head"><span>个人资料</span></ul>
+    <ul class="panel_body profile">
+        <div id="blog_userface">
+            <a href="http://my.csdn.net/jk6801251" target="_blank">
+            <img src="http://avatar.csdn.net/3/6/D/1_jk6801251.jpg" title="访问我的空间" style="max-width:90%"/>
+            </a>
+            <br />
+            <span><a href="http://my.csdn.net/jk6801251" class="user_name" target="_blank">jk6801251</a></span>
+        </div>
+<div class="interact">
+<!--<a href="#" class="attented" title="已关注"></a>-->
+<a href="javascript:void(0);" class="attent" id="span_add_follow" title="[加关注]"></a>
+<a href="javascript:void(0);" class="letter" onclick="loginto(1)" title="[发私信]"></a>
+</div>
+        <div id="blog_medal">
+        </div>
+        <ul id="blog_rank">
+            <li>访问：<span>48136次</span></li>
+            <li>积分：<span>1590分</span></li>
+            <li>排名：<span>第5103名</span></li>
+        </ul>
+        <ul id="blog_statistics">
+            <li>原创：<span>107篇</span></li>
+            <li>转载：<span>7篇</span></li>
+            <li>译文：<span>0篇</span></li>
+            <li>评论：<span>18条</span></li>
+        </ul>
+    </ul>
+</div>
+<script type="text/javascript">
+    var _blogger = 'jk6801251';
+</script>
+
+
+
+<div class="panel" id="panel_Search">
+    <ul class="panel_head"><span>文章搜索</span></ul>
+    <ul class="panel_body">
+        <form id="frmSearch" action="http://so.csdn.net/search" class="form_search" target="_blank">
+        <span><input id="inputSearch" type="text" class="blogsearch" title="请输入关键字" /></span>
+        <input id="btnSubmit" type="submit" value="搜索" title="search in blog" />
+        <input type="hidden" name="q" id="inputQ" />
+        <input type="hidden" name="t" value="blog" />
+        <a id="btnSearchBlog" target="_blank"></a>
+        </form>
+    </ul>
+</div><div id="panel_Category" class="panel">
+    <ul class="panel_head"><span>文章分类</span></ul>
+    <ul class="panel_body">
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/364862">DB2</a><span>(2)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/378884">EJB</a><span>(13)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/373796">hibarnate</a><span>(5)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/373798">ibaties</a><span>(0)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/369347">java</a><span>(3)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/499372">javascript</a><span>(8)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/373777">MYSQL</a><span>(0)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/373783">ORACLE</a><span>(0)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/490648">POI</a><span>(1)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/522550">RED5</a><span>(2)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/423811">SNS</a><span>(1)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/380841">SOAP</a><span>(1)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/373795">spring</a><span>(5)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/373958">Sql</a><span>(4)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/373778">SQL SERVER</a><span>(1)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/373794">struts</a><span>(1)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/364908">VMware Workstation</a><span>(1)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/380835">web service</a><span>(1)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/380763">weblogic</a><span>(2)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/380764">websphere</a><span>(0)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/369349">日语</a><span>(0)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/369348">杂文</a><span>(10)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/385612">移动开发</a><span>(3)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/369350">网页</a><span>(6)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/373799">设计模式</a><span>(0)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/jk6801251/article/category/914821">EXTJS</a><span>(1)</span>
+        </li>
+    </ul>
+</div><div id="panel_Archive" class="panel">
+    <ul class="panel_head"><span>文章存档</span></ul>
+    <ul class="panel_body">
+        <div id="archive_list">
+        <!--归档统计-->
+        <li><a href="http://blog.csdn.net/jk6801251/article/month/2013/02">2013年02月</a><span>(3)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2012/09">2012年09月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2011/12">2011年12月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2011/10">2011年10月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2011/03">2011年03月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2011/02">2011年02月</a><span>(5)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2010/09">2010年09月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2010/08">2010年08月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2010/06">2010年06月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2010/03">2010年03月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2010/02">2010年02月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2009/03">2009年03月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2009/01">2009年01月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2008/12">2008年12月</a><span>(7)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2008/11">2008年11月</a><span>(4)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2008/09">2008年09月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2008/08">2008年08月</a><span>(3)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2008/07">2008年07月</a><span>(3)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2008/06">2008年06月</a><span>(3)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2008/05">2008年05月</a><span>(3)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2008/04">2008年04月</a><span>(21)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2008/03">2008年03月</a><span>(9)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2008/02">2008年02月</a><span>(21)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2008/01">2008年01月</a><span>(4)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2007/12">2007年12月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2007/11">2007年11月</a><span>(7)</span></li><li><a href="http://blog.csdn.net/jk6801251/article/month/2007/10">2007年10月</a><span>(1)</span></li>
+        </div>
+    </ul>
+</div>
+<div id="hotarticls" class="panel">
+    <ul class="panel_head"><span>阅读排行</span></ul>
+    <ul class="panel_body itemlist">
+        <li>
+            <a href="/jk6801251/article/details/5695148" title="EXCEL筛选重复记录">EXCEL筛选重复记录</a><span>(3063)</span>
+        </li>
+        <li>
+            <a href="/jk6801251/article/details/3734863" title="使用freeChart 例子">使用freeChart 例子</a><span>(2410)</span>
+        </li>
+        <li>
+            <a href="/jk6801251/article/details/3413773" title="POI操作WORD">POI操作WORD</a><span>(2195)</span>
+        </li>
+        <li>
+            <a href="/jk6801251/article/details/3573729" title="EXTJS FILE UploadDialog用JAVA实现例子">EXTJS FILE UploadDialog用JAVA实现例子</a><span>(1860)</span>
+        </li>
+        <li>
+            <a href="/jk6801251/article/details/3400424" title="java日期格式化中ParsePosition问题">java日期格式化中ParsePosition问题</a><span>(1835)</span>
+        </li>
+        <li>
+            <a href="/jk6801251/article/details/2492991" title="Ｏ型血人的性格特点">Ｏ型血人的性格特点</a><span>(1823)</span>
+        </li>
+        <li>
+            <a href="/jk6801251/article/details/1892704" title="hibernate中Criteria的DISTINCT查询问题的解决方法 ">hibernate中Criteria的DISTINCT查询问题的解决方法 </a><span>(1700)</span>
+        </li>
+        <li>
+            <a href="/jk6801251/article/details/6193442" title="jqgrid保持显示垂直滚动条">jqgrid保持显示垂直滚动条</a><span>(1290)</span>
+        </li>
+        <li>
+            <a href="/jk6801251/article/details/6193439" title="jqgrid 单元格自动换行">jqgrid 单元格自动换行</a><span>(1240)</span>
+        </li>
+        <li>
+            <a href="/jk6801251/article/details/6193447" title="jqgrid 控制列的水平宽度">jqgrid 控制列的水平宽度</a><span>(1202)</span>
+        </li>
+    </ul>
+</div>
+<div id="hotarticls2" class="panel">
+    <ul class="panel_head"><span>评论排行</span></ul>
+    <ul class="panel_body itemlist">
+        <li>
+            <a href="/jk6801251/article/details/1882410" title="hiberbate3.0使用HQL查询中文参数问题">hiberbate3.0使用HQL查询中文参数问题</a><span>(4)</span>
+        </li>
+        <li>
+            <a href="/jk6801251/article/details/3400424" title="java日期格式化中ParsePosition问题">java日期格式化中ParsePosition问题</a><span>(3)</span>
+        </li>
+        <li>
+            <a href="/jk6801251/article/details/6193442" title="jqgrid保持显示垂直滚动条">jqgrid保持显示垂直滚动条</a><span>(3)</span>
+        </li>
+        <li>
+            <a href="/jk6801251/article/details/3980529" title="搭建RED5应用">搭建RED5应用</a><span>(2)</span>
+        </li>
+        <li>
+            <a href="/jk6801251/article/details/2119567" title="允许键值重复   不允许键重复   不允许建与值同时重复的MAP">允许键值重复   不允许键重复   不允许建与值同时重复的MAP</a><span>(1)</span>
+        </li>
+        <li>
+            <a href="/jk6801251/article/details/2121367" title="Java的十六进制与字符串之间互相转换函数(16进制与String转换)">Java的十六进制与字符串之间互相转换函数(16进制与String转换)</a><span>(1)</span>
+        </li>
+        <li>
+            <a href="/jk6801251/article/details/2218917" title="proxool对于四种数据的配置xml">proxool对于四种数据的配置xml</a><span>(1)</span>
+        </li>
+        <li>
+            <a href="/jk6801251/article/details/6193447" title="jqgrid 控制列的水平宽度">jqgrid 控制列的水平宽度</a><span>(1)</span>
+        </li>
+        <li>
+            <a href="/jk6801251/article/details/2132833" title="java中的时间操作">java中的时间操作</a><span>(1)</span>
+        </li>
+        <li>
+            <a href="/jk6801251/article/details/3734863" title="使用freeChart 例子">使用freeChart 例子</a><span>(1)</span>
+        </li>
+    </ul>
+</div>
+<div id="homepageArticles" class="panel">
+    <ul class="panel_head"><span>推荐文章</span></ul>
+    <ul class="panel_body" id="ad_commend">
+    </ul>
+</div>
+<script type="text/javascript">
+    new Ad(12, 'ad_commend');
+</script><div id="newcomments" class="panel">
+<ul class="panel_head"><span>最新评论</span></ul>
+<ul class="panel_body itemlist">
+    <li>
+    <a href="/jk6801251/article/details/6193447#comments">jqgrid 控制列的水平宽度</a>
+    <p style="margin:0px;"><a href="/duaiwuyuexue120" class="user_name">duaiwuyuexue120</a>:
+挺好的
+    </p>
+    </li>
+    <li>
+    <a href="/jk6801251/article/details/6193442#comments">jqgrid保持显示垂直滚动条</a>
+    <p style="margin:0px;"><a href="/yhg7752" class="user_name">yhg7752</a>:
+如果不在ie中显示滚动条且要把所有记录条数显示出来怎么办？我现在height：‘auto’ 在火狐中...
+    </p>
+    </li>
+    <li>
+    <a href="/jk6801251/article/details/6193442#comments">jqgrid保持显示垂直滚动条</a>
+    <p style="margin:0px;"><a href="/yhg7752" class="user_name">yhg7752</a>:
+
+    </p>
+    </li>
+    <li>
+    <a href="/jk6801251/article/details/6193442#comments">jqgrid保持显示垂直滚动条</a>
+    <p style="margin:0px;"><a href="/yhg7752" class="user_name">yhg7752</a>:
+代码放在哪里呢？
+    </p>
+    </li>
+    <li>
+    <a href="/jk6801251/article/details/3400424#comments">java日期格式化中ParsePosition问题</a>
+    <p style="margin:0px;"><a href="/hh05061107cm" class="user_name">hh05061107cm</a>:
+SimpleDateFormat df = new SimpleDateFormat(&amp;quot;E...
+    </p>
+    </li>
+    <li>
+    <a href="/jk6801251/article/details/3400424#comments">java日期格式化中ParsePosition问题</a>
+    <p style="margin:0px;"><a href="/hh05061107cm" class="user_name">hh05061107cm</a>:
+不知道你这个为什么不报错？我采用了下面的方式
+    </p>
+    </li>
+    <li>
+    <a href="/jk6801251/article/details/2119567#comments">允许键值重复   不允许键重复   不允许建与值同时重复的MAP</a>
+    <p style="margin:0px;"><a href="/nrs12345" class="user_name">nrs12345</a>:
+太牛了，一个，太强大了。
+    </p>
+    </li>
+    <li>
+    <a href="/jk6801251/article/details/2121367#comments">Java的十六进制与字符串之间互相转换函数(16进制与String转换)</a>
+    <p style="margin:0px;"><a href="/sp015040" class="user_name">sp015040</a>:
+我用你的例子，如下public static void main(String args[]) th...
+    </p>
+    </li>
+    <li>
+    <a href="/jk6801251/article/details/3734863#comments">使用freeChart 例子</a>
+    <p style="margin:0px;"><a href="/jzy110" class="user_name">jzy110</a>:
+
+    </p>
+    </li>
+    <li>
+    <a href="/jk6801251/article/details/3980529#comments">搭建RED5应用</a>
+    <p style="margin:0px;"><a href="/匿名用户" class="user_name">匿名用户</a>:
+
+    </p>
+    </li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+</div>
+
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/newblog.min.js?v=1.1"></script>
+<script type="text/javascript" src="http://medal.blog.csdn.net/showblogmedal.ashx?blogid=250718"></script>
+
+<script type="text/javascript" src="http://csdnimg.cn/pubfooter/js/publib_footer.js"></script>
+
+<script type="text/javascript" src="http://passport.csdn.net/content/loginbox/login.js"></script>
+<script type="text/javascript">document.write("<img src=http://counter.csdn.net/pv.aspx?id=24 border=0 width=0 height=0>");</script>
+<script type="text/javascript" src="http://www.csdn.net/ui/scripts/Csdn/counter.js"></script>
+
+
+<script type="text/javascript" src="http://ad.csdn.net/scripts/ad-blog.js"></script>
+</div>
+</body>
+</html>

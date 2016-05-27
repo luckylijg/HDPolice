@@ -1,0 +1,27 @@
+ body{margin:0 0;}   
+        .myd{  
+            /* background: #77887E ;   */
+            background: transparent;  
+            height: 200%;  
+           left: 0%;  
+            right: 0%;  
+            width: 100%;  
+            position: absolute;  
+            z-index: 10000;  
+            
+       }   
+          
+        .pd{  
+        	border:5px solid #000;
+        	border-color:gray;
+            background:#F0F0F0;   
+  			vertical-align:text-bottom;
+  			
+            height: 350px;  
+            width: 550px;  
+            position: absolute;  
+            z-index: 10002;
+            
+        }
+        
+       

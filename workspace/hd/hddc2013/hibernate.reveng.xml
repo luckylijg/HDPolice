@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+
+	<table name="code" catalog="police"
+		class="com.goldsoft.model.Code">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="complaint" catalog="police"
+		class="com.goldsoft.model.Complaint">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="complaintdepartment" catalog="police"
+		class="com.goldsoft.model.ComplaintDepartment">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="complainthandlesort" catalog="police"
+		class="com.goldsoft.model.ComplaintThandleSort">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="complaintinspector" catalog="police"
+		class="com.goldsoft.model.ComplaintInspector">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="complaintquestionsort" catalog="police"
+		class="com.goldsoft.model.ComplaintQuestionSort">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="department" catalog="police"
+		class="com.goldsoft.model.Department">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="handlesort" catalog="police"
+		class="com.goldsoft.model.HandleSort">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="module" catalog="police"
+		class="com.goldsoft.model.Module">
+		<primary-key>
+			<generator class="assigned"></generator>
+		</primary-key>
+	</table>
+	<table name="questionsort" catalog="police"
+		class="com.goldsoft.model.QuestionSort">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="role" catalog="police"
+		class="com.goldsoft.model.Role">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="rolemodule" catalog="police"
+		class="com.goldsoft.model.RoleModule">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="scoreserial" catalog="police"
+		class="com.goldsoft.model.ScoreSerial">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="user" catalog="police"
+		class="com.goldsoft.model.User">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="userrole" catalog="police"
+		class="com.goldsoft.model.UserRole">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+<table name="feedback" catalog="police"
+	class="com.goldsoft.model.Feedback">
+	<primary-key>
+		<generator class="native"></generator>
+	</primary-key>
+</table>
+</hibernate-reverse-engineering>

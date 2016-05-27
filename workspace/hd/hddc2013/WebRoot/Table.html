@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>内嵌表格</title>
+<link href="css/Ind.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="Tab-D">
+  <form>
+   <table border="1" cellpadding="0" cellspacing="0">
+      <tr>
+        <th>编号</th>
+        <td colspan="2"><input class="W180" name="" type="text" /></td>
+        <td class="W90">时间</td>
+        <td><input class="W95" name="" type="text" /></td>
+        <td class="W90">督察单位</td>
+        <td>
+          <select class="W95" name="select" id="select">
+            <option>--请选择--</option>
+          </select>
+        </td>
+        <td class="W90">督察民警</td>
+        <td>
+          <select class="W95" name="select" id="select">
+            <option>--请选择--</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th rowspan="3"><p>投诉人</p></th>
+        <td class="W90">姓名</td>
+        <td><input class="W95" name="" type="text" /></td>
+        <td class="W90">性别</td>
+        <td>
+          <select class="W40" name="select" id="select">
+            <option>男</option>
+            <option>女</option>
+          </select></td>
+        <td class="W90">年龄</td>
+        <td><input class="W95" name="" type="text" /></td>
+        <td class="W90">职业</td>
+        <td><input class="W95" name="" type="text" /></td>
+      </tr>
+      <tr>
+        <td class="W90">单位或地址</td>
+        <td colspan="3">
+        <textarea class="W300" name="textarea" id="textarea" cols="45" rows="5"></textarea></td>
+        <td class="W90">投诉方式</td>
+        <td colspan="3">
+          <select class="W95" name="select" id="select">
+            <option>来电</option>
+            <option>来电</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="W90">身份证号码</td>
+        <td colspan="3">
+          <input type="text" class="W300" name="textfield" id="textfield" />
+        </td>
+        <td class="W90">联系电话</td>
+        <td colspan="3" style="text-align:left;">
+         <input type="text" class="W144" name="textfield" id="textfield" />
+        </td>
+      </tr>
+      <tr>
+        <th rowspan="2"><p>被投诉人</p></th>
+        <td class="W90">涉及人员</td>
+        <td colspan="3"><textarea class="W300" name="textarea" id="textarea" cols="45" rows="5"></textarea></td>
+        <td class="W90">问题类别</td>
+        <td colspan="3">
+          <textarea class="W300" name="textarea" id="textarea" cols="45" rows="5"></textarea>
+          <input style="border:none; height:23px;" name="" class="Buttn" value="选择" type="button" />
+        </td>
+      </tr>
+      <tr>
+        <td class="W90">涉及单位</td>
+        <td colspan="7" style="text-align:left;">
+          <textarea class="W300 Mar-L" name="textarea" id="textarea" cols="45" rows="5"></textarea>
+          <input style="border:none; height:23px;" name="" class="Buttn" value="选择" type="button" />
+        </td>
+      </tr>
+      <tr>
+        <th rowspan="2"><p>反应问题及要求</p> </th>
+        <td colspan="8">
+        <textarea style="height:200px;" class="W820" name="textarea2" id="textarea2"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="8" style="text-align:right; padding-right:114px;">        图片或视频资料名：<input class="W180" name="" type="text" />
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td class="W90">领导批示</td>
+        <td colspan="7">
+          <textarea class="W665 Mar-L" name="textarea" id="textarea" cols="45" rows="5"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <th rowspan="2"><p>查办结果</p></th>
+        <td colspan="8">
+          <textarea style="height:200px;" class="W820" name="textarea2" id="textarea2"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="8">
+          图片或视频资料名：<input class="W180" name="" type="text" />
+          <select class="W95" name="select" id="select">
+            <option>查实</option>
+            <option>未查实</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">&nbsp;</td>
+        <td class="W90">回访意见</td>
+        <td colspan="3">
+          <select class="W95" name="select" id="select">
+            <option>无</option>
+            <option>无</option>
+          </select>
+        </td>
+        <td class="W90">查结时间</td>
+        <td colspan="3"><input class="W95" name="" type="text" /></td>
+      </tr>
+      <tr>
+        <td class="W90">处理分类</td>
+        <td colspan="7">
+           <textarea class="W300 Mar-L" name="textarea" id="textarea" cols="45" rows="5"></textarea>
+          <input style="border:none; height:23px;" name="" class="Buttn" value="选择" type="button" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">扣分：
+          <select class="W95" name="select" id="select">
+            <option>0</option>
+            <option>5</option>
+          </select></td>
+        <td colspan="3">预警：
+          <select class="W95" name="select" id="select">
+            <option>是</option>
+            <option>否</option>
+          </select></td>
+        <td colspan="2">审核：
+          <select class="W95" name="select" id="select">
+            <option>通过</option>
+            <option>未通过</option>
+          </select></td>
+      </tr>
+      <tr>
+        <th><p>备注</p></th>
+        <td colspan="8">
+         <textarea style="height:200px;" class="W820" name="textarea2" id="textarea2"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="9">
+           <input style="border:none; height:23px;" name="" class="Buttn Mt-lr" value="提交" type="button" />
+           <input style="border:none; height:23px;" name="" class="Buttn-02 Mt-lr" value="保存" type="button" />
+           <input style="border:none; height:23px;" name="" class="Buttn-03 Mt-lr" value="重置" type="button" />
+        </td>
+      </tr>
+    </table>
+   </form>
+ </div>
+</body>
+</html>

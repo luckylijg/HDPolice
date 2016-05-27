@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="hddc2013"
+  id="myeclipse.1364269621341"
+  context-root="/hddc2013"
+  j2ee-spec="5.0"
+  archive="hddc2013.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,24 @@
+#rolediv{
+	width:15%;
+	position: absolute;
+	top:15%;
+	cursor: pointer;
+}
+
+#modulediv{
+	width:85%;
+	position:absolute;
+	top:3%;
+	left:15%;
+}
+
+.roletd{
+	height: 40px;
+	color: red;
+}
+
+.moduletd{
+	width:5%;
+	height:40px;
+	vertical-align: top;
+}

@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+font:12px/1.231 "SimSun","Arial Narrow","helvetica","clean","sans-serif";
+margin:auto;
+}
+
+img {
+-ms-interpolation-mode:bicubic;
+}
+
+label,button {
+cursor:pointer;
+_cursor:hand;
+}
+
+button {
+overflow:visible;
+}
+
+abbr[title],acronym[title] {
+border-bottom:1px dotted;
+cursor:help;
+}
+
+input[type=hidden] {
+display:none!important;
+}
+
+a {
+color:#000;
+text-decoration:none;
+}
+
+a:hover {
+text-decoration:underline;
+}
+
+.fix {
+zoom:1;
+}
+
+.fix:after {
+content:"";
+visibility:hidden;
+display:block;
+height:0;
+clear:both;
+}
+
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {
+margin:0;
+padding:0;
+}
+
+table {
+border-collapse:collapse;
+border-spacing:0;
+font-size:inherit;
+font:100%;
+}
+.Tab-D{ width:1050px; margin:0 auto; overflow:hidden;}
+.Tab-D table{ border:1px #B6CDE2 solid; width:100%; table-layout:fixed;}
+.Tab-D td,.Tab-D th{ border:1px #B6CDE2 solid;}
+.Tab-D td{ color:#333; font-size:12px; line-height:26px; text-align:center;}
+.Tab-D th{ background-color:#E6EEF6; font-size:14px; font-weight:bold; color:#333; width:90px; height:30px; text-align:center; line-height:30px;}
+.Tab-D th p{ width:20px; padding:3px 35px; line-height:24px; overflow:hidden;}
+.W90{ width:90px; background-color:#e8e8e8;}
+.Tab-D input,.Tab-D textarea{ padding:0px 5px; line-height:20px; height:20px; border:1px #ccc solid; font-size:12px; overflow:hidden;}
+.Tab-D textarea{ height:60px;}
+.W180{ width:180px;}
+.W95{ width:95px;}
+.W40{ width:40px;}
+.W300{ width:300px; line-height:20px; margin:5px 0px;}
+.W144{ width:144px; margin-left:17px;}
+.Buttn,.Buttn-02,.Buttn-03{ width:52px; height:24px; background:url(../images/but_bg.jpg) no-repeat; text-align:center; border:none; cursor:pointer; color:#333;}
+.Mar-L{ margin-left:46px; width:450px;}
+.W820{ width:750px; margin:5px; padding:5px; overflow:hidden;}
+.W665{ width:665px; padding:5px; margin:5px; overflow:hidden;}
+.Buttn-02{background:url(../images/but_04.jpg) no-repeat;}
+.Buttn-03{background:url(../images/tar_01.jpg) no-repeat;}
+.Mt-lr{margin:10px 20px; }

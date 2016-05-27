@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+		<!-- JDBC/ADO.NET数据库访问组件默认Connection.commit为true(即每一条SQL执行为一个事务，hibernate默认事务结束关闭session)；数据库 默认commit为false-->
+		<property name="hibernate.connection.autocommit">true</property>
+		<property name="hbm2ddl.auto">update</property><!-- ? -->
+		<property name="show_sql">false</property>
+
+		<property name="dialect">
+			org.hibernate.dialect.MySQLDialect
+		</property>
+		<property name="connection.url">
+			jdbc:mysql://localhost:3306/police?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull&amp;transformedBitIsBoolean=true
+		</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+		<property name="connection.driver_class">
+			com.mysql.jdbc.Driver
+		</property>
+		<property name="myeclipse.connection.profile">hddc</property>
+
+		<!-- 启动"查询缓存" -->
+		<property name="hibernate.cache.use_query_cache">true</property>
+		<!-- 设置二级缓存插件EHCache的Provider类-->
+		<property name="hibernate.cache.provider_class">
+			org.hibernate.cache.EhCacheProvider
+		</property>
+		<mapping class="com.goldsoft.model.Module" />
+		<mapping class="com.goldsoft.model.Code" />
+		<mapping class="com.goldsoft.model.ScoreSerial" />
+		<mapping class="com.goldsoft.model.Department" />
+		<mapping class="com.goldsoft.model.QuestionSort" />
+		<mapping class="com.goldsoft.model.Complaint" />
+		<mapping class="com.goldsoft.model.Role" />
+		<mapping class="com.goldsoft.model.HandleSort" />
+		<mapping class="com.goldsoft.model.User" />
+		<mapping class="com.goldsoft.model.Feedback" />
+
+
+
+
+
+	</session-factory>
+
+</hibernate-configuration>

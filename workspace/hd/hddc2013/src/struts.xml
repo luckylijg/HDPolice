@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+<constant name="struts.i18n.encoding" value="utf-8"/>
+
+
+<package name="default" extends="json-default" namespace="/aaa">
+      <interceptors>
+			
+            <interceptor name="loginInterceptor" class="com.goldsoft.filter.LoginInterceptor"/>
+           <interceptor-stack name="hddcStack">
+           	
+            	<interceptor-ref name="loginInterceptor" />
+				
+              <interceptor-ref name="defaultStack"></interceptor-ref>
+           </interceptor-stack>
+       </interceptors>
+      
+       <default-interceptor-ref name="hddcStack"/>
+       
+       <action name="user" class="com.goldsoft.action.UserAction">
+			<result name="login">index.jsp</result>
+			<result name="error">login.jsp</result>
+			<result name="loginout">login.jsp</result>
+	</action>
+     <action name="rand" class="com.goldsoft.action.RandomAction">  
+            <result type="stream">  
+                <param name="contentType">image/jpeg</param>  
+                <param name="inputName">inputStream</param>  
+            </result>  
+    </action>
+ 
+</package>
+ 
+<package name="default2" extends="default" namespace="/">
+     
+ 
+	<action name="user" class="com.goldsoft.action.UserAction">
+			<result name="login">index.jsp</result>
+			<result name="error">login.jsp</result>
+			<result name="loginout">login.jsp</result>
+	</action>
+     <action name="rand" class="com.goldsoft.action.RandomAction">  
+            <result type="stream">  
+                <param name="contentType">image/jpeg</param>  
+                <param name="inputName">inputStream</param>  
+            </result>  
+    </action>
+</package>
+
+
+
+ <package name="user" namespace="/manage/system" extends="default">
+        <action name="user" class="com.goldsoft.action.UserAction">
+			<result name="list3">user_list.jsp</result>
+			<result name="inAdd">user_add.jsp</result>
+			<result name="add" type="redirect">user!list3.action</result>
+			<result name="edit">user_edit.jsp</result>
+			<result name="update" type="redirect">user!list3.action</result>
+			<result name="delete" type="redirect">user!list3.action</result>
+			<result name="errorupdatepwd">updatepwd.jsp</result>
+			<result name="search" >user_list.jsp</result>
+			<result  type="json"><param name="root">result</param></result>
+			
+			<result name="personal">personal_list.jsp</result>
+			<result name="personaledit">personal_edit.jsp</result>
+			<result name="personalupdate" type="redirect">user!personal.action</result>
+
+			<result name="modifyPwd">successpwd.jsp</result>
+
+		</action>
+		 <action name="role" class="com.goldsoft.action.RoleAction">
+			<result name="list">role_list.jsp</result>
+			<result name="inAdd">role_add.jsp</result>
+			<result name="add" type="redirect">role!list.action</result>
+			<result name="edit">role_edit.jsp</result>
+			<result name="update" type="redirect">role!list.action</result>
+			<result name="delete" type="redirect">role!list.action</result>
+			<result name="roleModule">role_module.jsp</result>
+			<result  type="json"><param name="root">result</param></result>
+			<result name="addModuleToRole">role_module.jsp</result>
+		</action> 
+		 <action name="module" class="com.goldsoft.action.ModuleAction">
+			<result name="list">module_list.jsp</result>
+			<result name="inAdd">module_add.jsp</result>
+			<result name="add" type="redirect">module!list.action</result>
+			<result name="edit">module_edit.jsp</result>
+			<result name="update" type="redirect">module!list.action</result>
+			<result name="delete" type="redirect">module!list.action</result>
+			<result name="get">role_module.jsp</result>
+		</action>
+		 <action name="mysql" class="com.goldsoft.action.MySQLAction">
+			<result name="error">mysqlbackup.jsp</result>
+			<result name="error2">mysqlload.jsp</result>
+		</action>
+    </package>
+
+
+  <include file="hddc-*.xml" />
+
+</struts>    

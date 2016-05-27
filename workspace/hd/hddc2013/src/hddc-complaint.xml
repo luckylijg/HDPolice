@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="complaint" namespace="/manage/complaint"
+		extends="default">
+
+		<action name="complaint" class="com.goldsoft.action.ComplaintAction">
+			<result name="show">complaint_view.jsp</result>
+			<result name="print">complaint_print.jsp</result>
+			<result name="list">complaint_list.jsp</result>
+			<result name="listprint">complaint_list_print.jsp</result>
+			<result name="inAdd">complaint_add.jsp</result>
+			<result name="edit">complaint_edit.jsp</result>
+			<result name="add" type="redirect">complaint!list.action</result>
+			<result name="update" type="redirect">complaint!show.action?complaintid=${complaint.complaintid }</result>
+			<result name="update1" type="redirect">complaint!show.action?complaintid=${complaint.complaintid }</result>
+			<result name="delete" type="redirect">complaint!list.action</result>
+			<result name="allList">complaint_all_list.jsp</result>
+			<result name="serachAll">complaint_all_list_search.jsp</result>
+			<result name="listAll">all_list.jsp</result>
+			<result name="deletelistAll" type="redirect">complaint!listAll.action</result>
+		</action>
+
+		<action name="fieldInspect" class="com.goldsoft.action.FieldInspectAction">
+			<result name="show">fieldinspect_view.jsp</result>
+			<result name="list">fieldinspect_list.jsp</result>
+			<result name="listlistprint">fieldinspect_list_print.jsp</result>
+			<result name="inAdd">fieldinspect_add.jsp</result>
+			<result name="edit">fieldinspect_edit.jsp</result>
+			<result name="add" type="redirect">fieldInspect!list.action</result>
+			<result name="update" type="redirect">fieldInspect!show.action?complaintid=${complaint.complaintid }</result>
+			<result name="update1" type="redirect">fieldInspect!show.action?complaintid=${complaint.complaintid }</result>
+			<result name="delete" type="redirect">fieldInspect!list.action</result>
+		</action>
+
+		<action name="popularFeelings" class="com.goldsoft.action.PopularFeelingsAction">
+			<result name="show">popularfeelings_view.jsp</result>
+			<result name="list">popularfeelings_list.jsp</result>
+			<result name="listprint">popularfeelings_list_print.jsp</result>
+			<result name="inAdd">popularfeelings_add.jsp</result>
+			<result name="edit">popularfeelings_edit.jsp</result>
+			<result name="add" type="redirect">popularFeelings!list.action</result>
+			<result name="update" type="redirect">popularFeelings!show.action?complaintid=${complaint.complaintid }</result>
+			<result name="update1" type="redirect">popularFeelings!show.action?complaintid=${complaint.complaintid }</result>
+			<result name="delete" type="redirect">popularFeelings!list.action
+			</result>
+		</action>
+
+		<action name="webInspect" class="com.goldsoft.action.WebinSpectAction">
+			<result name="show">webinspect_view.jsp</result>
+			<result name="list">webinspect_list.jsp</result>
+			<result name="listAll">all_list.jsp</result>
+			<result name="listprint">webinspect_list_print.jsp</result>
+			<result name="inAdd">webinspect_add.jsp</result>
+			<result name="edit">webinspect_edit.jsp</result>
+			<result name="add" type="redirect">webInspect!list.action</result>
+			<result name="update" type="redirect">webInspect!show.action?complaintid=${complaint.complaintid }</result>
+			<result name="delete" type="redirect">webInspect!list.action</result>
+		</action>
+		<action name="audit" class="com.goldsoft.action.WebinSpectAction">
+			<result name="auditList">audit_list.jsp</result>
+			<result name="auditEdit">audit_${type1}_edit.jsp</result>
+			<result name="auditUpdate" type="redirect">${type1}!show.action?complaintid=${complaint.complaintid	}</result>
+			<result name="auditShow">${type1}_view.jsp</result>
+			<result name="delete" type="redirect">audit!auditList.action</result>
+			<result name="update1" type="redirect">audit!auditList.action</result>
+			<result name="auditSearch">audit_list.jsp</result>
+			<result name="auditPrint">audit_print.jsp</result>
+		</action>
+		<action name="print" class="com.goldsoft.action.WebinSpectAction">
+			<result name="print">print_${type1}_view.jsp</result>
+			
+	
+		</action>
+		<action name="statistics" class="com.goldsoft.action.WebinSpectAction">
+			<result name="statisticsList">statistics_list.jsp</result>
+			<result name="statisticsSearch">statistics_list.jsp</result>
+			<result name="statisticsPrint">statistics_print.jsp</result>
+			<result name="search">${type1}_list.jsp</result>
+		</action>
+		<action name="feed" class="com.goldsoft.action.FeedbackAction">
+			<result name="show">feed_view.jsp</result>
+			<result name="list">feed_list.jsp</result>
+			<!-- <result name="listprint">feed_list_print.jsp</result> -->
+			<result name="inAdd">feed_add.jsp</result>
+			<result name="edit">feed_edit.jsp</result>
+			<result name="add">success.jsp</result>
+			<result name="update" >success.jsp</result>
+			<result name="error">error.jsp</result>
+			<result name="delete" type="redirect">feed!list.action</result>
+		</action>
+		
+	</package>
+
+	<!-- 柱状图 -->
+	<package name="complaint1" namespace="/jfreechart" extends="default">
+		<action name="complaint1" class="com.goldsoft.action.ComplaintAction">
+			<result name="listByEarlyWarning">earlywarning.jsp</result>
+			<result name="searchListByEarlyWarning">earlywarning.jsp</result>
+		</action>
+
+		<action name="questionSort" class="com.goldsoft.action.QuestionSortAction">
+			<result name="list">questionsort.jsp</result>
+			<result name="searchList">questionsort.jsp</result>
+
+		</action>
+		<action name="department" class="com.goldsoft.action.DepartmentAction">
+			<result name="list">department.jsp</result>
+			<result name="searchList">department.jsp</result>
+			<result name="listbykeshi">departmentbykeshi.jsp</result>
+			<result name="searchListbykeshi">departmentbykeshi.jsp</result>
+		</action>
+	</package>
+	<!-- 千分制考核 -->
+	<package name="department" namespace="/manage/department" extends="default">
+		<action name="department" class="com.goldsoft.action.DepartmentAction">
+			<result name="qianfen">qianfenkaohe.jsp</result>
+			<result name="dep_qianfen">dep_qianfenkaohe.jsp</result>
+			<result name="paimingdadui">daduipaiming.jsp</result>
+			<result name="keshipaiming">keshipaiming.jsp</result>
+			<result name="departmentnamelist">departmentname_list.jsp</result>
+			<!-- <result name="paiming">daduipaiming.jsp</result>
+			<result name="paimings">keshipaiming.jsp</result> -->
+			<result name="printqianfen">qianfenkaohe_print.jsp</result>
+			<result name="printpaimingdadui">daduipaiming_print.jsp</result>
+			<result name="printpaimingkeshi">keshipaiming_print.jsp</result>
+			<result name="tousu">tousu.jsp</result>
+			<result name="xianchang">xianchang.jsp</result>
+			<result name="wangshang">wangshang.jsp</result>
+			<result name="wangluo">wangluo.jsp</result>
+		</action>
+	</package>
+	
+	
+<package name="defau1t" extends="default" namespace="/default1">
+      <interceptors>
+            <interceptor name="jfree" class="org.apache.struts2.impl.Jfreechart"/>
+           <interceptor-stack name="interStack">
+            	<interceptor-ref name="jfree" />  
+              <interceptor-ref name="hddcStack"></interceptor-ref>
+           </interceptor-stack>
+       </interceptors>
+       <default-interceptor-ref name="interStack"/>
+</package>
+	
+</struts>

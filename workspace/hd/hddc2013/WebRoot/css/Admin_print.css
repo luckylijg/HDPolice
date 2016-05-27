@@ -1,0 +1,191 @@
+@charset utf-8;
+body {
+font:12px/1.231 "SimSun","Arial Narrow","helvetica","clean","sans-serif";
+margin:auto;
+
+}
+
+
+
+
+
+img {
+-ms-interpolation-mode:bicubic;
+}
+
+label,button {
+cursor:pointer;
+_cursor:hand;
+}
+
+button {
+overflow:visible;
+}
+
+abbr[title],acronym[title] {
+border-bottom:1px dotted;
+cursor:help;
+}
+
+input[type=hidden] {
+display:none!important;
+}
+
+a {
+color:#000;
+text-decoration:none;
+}
+
+a:hover {
+text-decoration:underline;
+}
+
+.fix {
+zoom:1;
+}
+
+.fix:after {
+content:"";
+visibility:hidden;
+display:block;
+height:0;
+clear:both;
+}
+
+.lPaddingLg {
+padding-left:10px!important;
+}
+
+.hPaddingLg {
+padding-left:10px!important;
+padding-right:10px!important;
+}
+
+.vPaddingLg {
+padding-top:10px!important;
+padding-bottom:10px!important;
+}
+
+.tPaddingLg {
+padding-top:10px!important;
+}
+
+.rPaddingLg {
+padding-right:10px!important;
+}
+
+.bPaddingLg {
+padding-bottom:10px!important;
+}
+
+.tMarginLg {
+margin-top:10px!important;
+}
+
+.rMarginLg {
+margin-right:10px!important;
+}
+
+.bMarginLg {
+margin-bottom:10px!important;
+}
+
+.lMarginLg {
+margin-left:10px!important;
+}
+
+.hMarginLg {
+margin-left:10px!important;
+margin-right:10px!important;
+}
+
+.vMarginLg {
+margin-top:10px!important;
+margin-bottom:10px!important;
+}
+
+html {
+color:#000;
+background:#FFF;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {
+margin:0;
+padding:0;
+
+}
+
+table {
+border-collapse:collapse;
+border-spacing:0;
+font-size:inherit;
+font:100%;
+}
+
+fieldset,img {
+border:0;
+}
+
+address,caption,cite,code,dfn,em,strong,th,var {
+font-style:normal;
+font-weight:400;
+}
+
+li {
+list-style:none;
+}
+
+caption,th {
+text-align:left;
+}
+
+h1,h2,h3,h4,h5,h6 {
+font-size:100%;
+font-weight:400;
+}
+
+q: before,q: after {
+content:'';
+}
+
+abbr,acronym {
+border:0;
+font-variant:normal;
+}
+
+sup {
+vertical-align:text-top;
+}
+
+sub {
+vertical-align:text-bottom;
+}
+
+input,textarea,select {
+font-family:inherit;
+font-weight:inherit;
+font-size:100%;
+}
+
+legend {
+color:#000;
+}
+
+select,input,button,textarea {
+font:100% arial,helvetica,clean,sans-serif;
+}
+
+pre,code,kbd,samp,tt {
+font-family:monospace;
+line-height:100%;
+}
+
+
+
+
+.R-CON-print table{ width:90%; margin-top:8px; table-layout:fixed;}
+.R-Tit{ height:41px;   font-size:22px; color:#000; font-weight:bold;  line-height:40px; overflow:hidden;}
+.R-CON table{ width:90%; margin-top:8px; table-layout:fixed;border:1px black solid;}
+.R-CON td,.R-CON th{ border:1px black solid; height:28px; line-height:28px; color:#000; text-align:center;font-size:14px;}
+.R-CON th{ background-color:#e8e8e8; font-weight:bold; font-size:16px; }
+
